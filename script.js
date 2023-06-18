@@ -12,9 +12,15 @@ toAdd.addEventListener(
   el_delete.classList.add("delete");
   el_delete.innerHTML = "Delete"
   paragraph.appendChild(el_delete)
-  inputField.value = "";
   el_delete.addEventListener('click', function(){
    paragraph.style.display = "none";
   })
+ const task = inputField.value;
+ if(!task){
+  paragraph.style.display = "none"
+  alert("please fill out the task");
+  return;
+  
+ }
  }
 )
